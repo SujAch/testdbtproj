@@ -30,11 +30,12 @@ jobs:
       - name: Install dependencies
         run: |
           pip install dbt-snowflake
-          dbt deps
+      - name: Install dbt dependecies
+        run: dbt deps
           
 
     # dbt related commands here - run use --target prod/dev to run for specific environments
       - name: Run dbt models
-        run: dbt build  # works unexpectedly
+        run: dbt run --project-dir testdbtproj/ --profiles-dir  # works unexpectedly
       # - name: Test dbt models 
       #   run: dbt test --profiles-dir ./ 
