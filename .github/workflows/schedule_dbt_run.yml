@@ -30,8 +30,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install dbt-snowflake
-      - name: Install dbt dependecies
-        run: dbt deps
+      # - name: Install dbt dependecies
+      #   run: dbt deps
           
 
     # dbt related commands here - run use --target prod/dev to run for specific environments
