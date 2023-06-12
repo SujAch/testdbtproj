@@ -10,7 +10,7 @@ on:
     # run on push to development branch
     - main
 env:
-#  DBT_PROFILES_DIR: 
+#  DBT_PROFILES_DIR: "../dbt_project."
  DBT_SNOWFLAKE_USERNAME: "dbt"
  DBT_SNOWFLAKE_PW: "dbtpassword123"
  DBT_SNOWFLAKE_ROLE: "transform"
@@ -35,6 +35,6 @@ jobs:
 
     # dbt related commands here - run use --target prod/dev to run for specific environments
       - name: Run dbt models
-        run: dbt run --profiles-dir ./  --target dev  # works unexpectedly
+        run: dbt run  # works unexpectedly
       # - name: Test dbt models 
       #   run: dbt test --profiles-dir ./ 
