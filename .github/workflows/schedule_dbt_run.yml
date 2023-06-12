@@ -20,9 +20,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # - name: Check out
-    #     uses: actions/checkout@master
-
+      - name: Check out
+        uses: actions/checkout@main
     # - uses: actions/setup-python@v1
     #     with:
     #     python-version: "3.7.x"
@@ -36,7 +35,7 @@ jobs:
 
     # dbt related commands here - run use --target prod/dev to run for specific environments
       - name: Run dbt models
-        run: dbt run 
+        run: dbt deps 
         # --project-dir testdbtproj/ --profiles.  # works unexpectedly
       # - name: Test dbt models 
       #   run: dbt test --profiles-dir ./ 
