@@ -8,13 +8,12 @@ on:
    push:
     branches:
     # run on push to development branch
-    - master
+    - main
 env:
 #  DBT_PROFILES_DIR: 
- DBT_SNOWFLAKE_USERNAME: ${{ secrets.DBT_SNOWFLAKE_USERNAME }}
- DBT_SNOWFLAKE_PW: ${{ secrets.DBT_SNOWFLAKE_PW }}
- DBT_SNOWFLAKE_ROLE: ${{ secrets.DBT_SNOWFLAKE_ROLE }}
-
+ DBT_SNOWFLAKE_USERNAME: "dbt"
+ DBT_SNOWFLAKE_PW: "dbtpassword123"
+ DBT_SNOWFLAKE_ROLE: "transform"
 jobs:
    schedule_dbt_run:
     name: schedule_dbt_run
