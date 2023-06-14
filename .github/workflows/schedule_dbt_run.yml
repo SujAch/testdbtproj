@@ -34,6 +34,8 @@ jobs:
           
 
     # dbt related commands here - run use --target prod/dev to run for specific environments
+      - name: Run dbt SEEDS
+        run: dbt seed  
       - name: Run dbt models
         run: dbt run  
         # --project-dir testdbtproj/ --profiles.  # works unexpectedly
