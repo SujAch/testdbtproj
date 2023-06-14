@@ -41,4 +41,18 @@ models:
       +materialized: table
     src:
       +materialized: view
-
+seed:
+  testdbtproj:
+    +enabled: true
+    +schema: seed_data
+    # This configures seeds/country_codes.csv
+    races:      # Override column types
+      +column_types:
+        date: date
+        url: varchar(32)
+    csv:
+      +schema: csv
+    json:
+      +schema: json
+      +column_types:
+         contacts: variant
