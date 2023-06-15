@@ -48,7 +48,15 @@ seeds:
     # This configures seeds/country_codes.csv
     races:      # Override column types
       +column_types:
+        raceId: Int
+        year: Int
+        round: float
+        circuitId: int
+        name: string
         date: date
+        time: string
+        url: string
+        
        
     csv:
       +schema: csv
