@@ -49,7 +49,7 @@ seeds:
     races:      # Override column types
       +column_types:
         date: date
-        url: varchar(32)
+        url: varchar(500)
     csv:
       +schema: csv
     json:
