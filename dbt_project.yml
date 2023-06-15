@@ -49,7 +49,7 @@ seeds:
     races:      # Override column types
       +column_types:
         date: date
-        url: string
+       
     csv:
       +schema: csv
     json:
