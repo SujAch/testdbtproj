@@ -62,5 +62,4 @@ seeds:
       +schema: csv
     json:
       +schema: json
-      +column_types:
-         contacts: variant
+     
