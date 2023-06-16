@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: JSON_TABLE
+    database: AIRBNB
+    SCHEMA: RAW_DEV
+    table: MYJSONTABLE
