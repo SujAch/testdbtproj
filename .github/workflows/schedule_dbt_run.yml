@@ -1,10 +1,10 @@
 name: schedule_dbt_run
 
 on:
-   schedule:
-    # run at 7AM every single day
-    # https://crontab.guru <-- for generating CRON expression
-    - cron: "0 7 * * *"
+  #  schedule:
+  #   # run at 7AM every single day
+  #   # https://crontab.guru <-- for generating CRON expression
+  #   - cron: "0 7 * * *"
    push:
     branches:
     # run on push to development branch
@@ -29,8 +29,9 @@ jobs:
       - name: Install dependencies
         run: |
           pip install dbt-snowflake
-      # - name: Install dbt dependecies
-      #   run: dbt deps
+      - name: Install dbt dependecies
+        run: 
+          dbt deps
           
 
     # dbt related commands here - run use --target prod/dev to run for specific environments
