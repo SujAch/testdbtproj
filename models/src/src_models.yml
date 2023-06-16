@@ -4,4 +4,5 @@ sources:
   - name: JSON_TABLE
     database: AIRBNB
     SCHEMA: RAW_DEV
-    table: MYJSONTABLE
+    table:
+      - name: MYJSONTABLE
