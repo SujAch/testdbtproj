@@ -3,7 +3,7 @@ select distinct
 SELECT
   distinct v.key
 FROM
-  {{ source('JSON_TABLE',"MYJSONTABLE") }}, 
+  {{ source('staging',"jsontable") }}, 
   lateral flatten(input => JSON_DATA ) AS K, lateral flatten(input =>k.value) as v
 order by 1
 {% endset %}
@@ -21,8 +21,8 @@ order by 1
 select 
 JSON_DATA,
 {% for column_name in results_List %}
-{{json_column}}:{{ column_name }} as {{column_name}}
+{{ json_column }}:{{ column_name }} as {{ column_name }}
 {% if not loop.last %},{% endif %}
 {%endfor %}
-from {{ source('JSON_TABLE',"MYJSONTABLE") }}
+from {{ source('staging','jsontable') }}
 

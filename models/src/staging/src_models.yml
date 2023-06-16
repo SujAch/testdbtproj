@@ -1,9 +1,0 @@
-version: 2
-
-sources:
-  - name: staging
-    database: AIRBNB
-    SCHEMA: RAW_DEV
-    table:
-      - name: jsontable
-        identifier: MYJSONTABLE
