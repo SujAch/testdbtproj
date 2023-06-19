@@ -1,19 +1,21 @@
 version: 2
 
 sources:
-  - name: raw_sources
+  - name: RAW
     database: AIRBNB
-    SCHEMA: RAW
-    table:
-      - name: hosts
-        identifier: raw_hosts
-      - name: listings
-        identifier: raw_listings
-      - name: reviews
-        identifier: raw_reviews
-  - name: staging
+    schema: RAW
+    tables:
+      - name: RAW_HOSTS
+        identifier: RAW_HOSTS
+      - name: RAW_LISTINGS
+        identifier: RAW_LISTINGS
+      - name: RAW_REVIEWS
+        identifier: RAW_REVIEWS
+
+  - name: RAW_DEV
     database: AIRBNB
-    SCHEMA: RAW_DEV
-    table:
-      - name: jsontable
+    schema: RAW_DEV
+    tables:
+      - name: MYJSONTABLE
         identifier: MYJSONTABLE
+    

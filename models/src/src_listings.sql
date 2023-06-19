@@ -3,7 +3,7 @@ WITH raw_listings AS (
  *
  FROM
 
-  {{ source('raw_sources','listings') }}
+  {{ source('RAW','RAW_LISTINGS') }}
 )
 SELECT
  id AS listing_id,

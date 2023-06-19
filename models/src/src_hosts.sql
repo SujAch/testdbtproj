@@ -2,7 +2,7 @@ WITH raw_hosts AS (
  SELECT
  *
  FROM
- {{ source('raw_sources','hosts') }}
+ {{ source('RAW','RAW_HOSTS') }}
 )
 SELECT
  id AS host_id,
